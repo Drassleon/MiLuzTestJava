@@ -1,11 +1,23 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="MiLuzTestSuiteChrome" parallel="tests">	
+<suite name="MiLuzTestSuite" parallel="tests">
+	<test name="MantenimientoProviderFirefox">
+		<parameter name="navegador" value="firefox" />
+		<parameter name="testlinkIdNavegador" value="4" />
+		<parameter name="testlinkNombreNavegador" value="Firefox" />
+		<parameter name="rutaArchivoExcel"
+			value="D:\SoftwareExperimentos\RegistrarProveedorData.xlsx" />
+		<parameter name="remoto" value="0" />
+		<classes>
+			<class name="pe.com.test.system.testCase.MantenimientoProvider" />
+		</classes>
+	</test>
 	<test name="MantenimientoProviderChrome">
-	<parameter name="navegador" value="chrome"/>
-	<parameter name="testlinkIdNavegador" value="5"/>
-	<parameter name="testlinkNombreNavegador" value="Chrome"/>
-	<parameter name="rutaArchivoExcel" value="D:\SoftwareExperimentos\Excel\RegistrarProveedorData.xlsx"/>
-	<parameter name="remoto" value="0"/>
+		<parameter name="navegador" value="chrome" />
+		<parameter name="testlinkIdNavegador" value="5" />
+		<parameter name="testlinkNombreNavegador" value="Chrome" />
+		<parameter name="rutaArchivoExcel"
+			value="D:\SoftwareExperimentos\RegistrarProveedorData.xlsx" />
+		<parameter name="remoto" value="0" />
 		<classes>
 			<class name="pe.com.test.system.testCase.MantenimientoProvider" />
 		</classes>

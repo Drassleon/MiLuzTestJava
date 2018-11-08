@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -38,6 +39,15 @@ public final class MiLuzDriver {
 					webDriver = new ChromeDriver();
 				}
 				break;
+			case "edge":
+				if(remoto) {
+					URL server = new URL(URL_HUB);
+					DesiredCapabilities capabilities=DesiredCapabilities.edge();
+					webDriver = new RemoteWebDriver(server,capabilities);
+				}else {
+					System.setProperty("webdriver.edge.driver", "D:\\\\SoftwareExperimentos\\\\MicrosoftWebDriver.exe");
+					webDriver = new EdgeDriver();
+				}
 			}
 			webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}catch(Exception exception){
