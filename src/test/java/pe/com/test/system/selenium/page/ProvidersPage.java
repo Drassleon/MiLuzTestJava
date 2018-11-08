@@ -12,9 +12,8 @@ public class ProvidersPage {
 	private By botonNuevoProvider= By.xpath("/html/body/div/p[1]/a");
 	private By textoNombreProvider= By.id("nombre");
 	private By textoNumeroTelefono = By.id("numeroTelefonico");
-	private By comboBoxCurrency = By.id("tipoPago");
-	private By comboBoxBolivianos = By.xpath("//*[@id=\"tipoPago\"]/option[1]");
-	private By comboBoxDollars = By.id("//*[@id=\"tipoPago\"]/option[2]");
+	private By radioButtonBolivianos = By.id("tipoPago1");
+	private By radioButtonDolares = By.id("tipoPago2");
 	private By checkBoxHasDebt = By.id("existeDeuda1");
 	private By botonGuardarProvider= By.xpath("/html/body/div/div/div[2]/form/div[5]/div/input");
 
@@ -53,14 +52,12 @@ public class ProvidersPage {
 	}
 	
 	public void hacerClicBolivianos() throws Exception{
-		Select select = new Select(this.webDriver.findElement(comboBoxCurrency));
-		select.selectByValue("Bolivianos");
+		this.webDriver.findElement(radioButtonBolivianos).click();
 		Thread.sleep(2000);
 	}
 	
 	public void hacerClicDolares() throws Exception{
-		Select select = new Select(this.webDriver.findElement(comboBoxCurrency));
-		select.selectByValue("Dolares");
+		this.webDriver.findElement(radioButtonDolares).click();
 		Thread.sleep(2000);
 
 	}
