@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="navegador" value="chrome"/>
+  <parameter name="testlinkIdNavegador" value="5"/>
+  <parameter name="testlinkNombreNavegador" value="Chrome"/>
+  <parameter name="remoto" value="0"/>
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="pe.com.test.system.testCase.MantenimientoCategoria">
+        <methods>
+          <include name="actualizarCategoria_criterio01"/>
+          <include name="actualizarCategoria_criterio02"/>
+          <include name="actualizarCategoria_criterio03"/>
+          <include name="antesDelTest"/>
+          <include name="eliminarCategoria_criterio02"/>
+          <include name="eliminarCategoria_criterio01"/>
+          <include name="despuesDelTest"/>
+          <include name="insertarCategoria"/>
+        </methods>
+      </class> <!-- pe.com.test.system.testCase.MantenimientoCategoria -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
