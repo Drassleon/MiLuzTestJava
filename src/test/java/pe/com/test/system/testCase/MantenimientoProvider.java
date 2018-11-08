@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import pe.com.test.system.selenium.dataManager.Excel;
 import pe.com.test.system.selenium.page.ProvidersPage;
 import pe.com.test.system.selenium.util.Utilitario;
-import pe.com.test.system.testlink.util.VisorTestlink;
+import pe.com.test.system.testlink.util.MiLuzTestlink;
 
 public class MantenimientoProvider {
 
@@ -34,32 +34,66 @@ public class MantenimientoProvider {
 		String rutaArchivo = contexto.getCurrentXmlTest().getParameter("rutaArchivoExcel");
 		return Excel.leerExcel(rutaArchivo);
 	}
-	
-	/*@Test(dataProvider = "DatosDeEntrada")
+	//Insertar Coca Cola Company como proveedor con pago en dolares
+	@Test(dataProvider = "DatosDeEntrada")
 	public void insertarCategoria(String casoPrueba, String urlInicial,String usuario,
 			String clave, String nombre,String telefono,Boolean dolares,Boolean bolivianos,String valorEsperado, String urlTestlink, String keyTestlink,
 			String idTestCaseInternoTestlink, String idTestCaseExternoTestlink, 
 			String idTestPlanTestlink, String idBuildTestLink, String nombreBuildTestLink) {
 		try {
-			this.iniciarSesionPage.ingresarPaginaIniciarSesion(urlInicial);
-			this.iniciarSesionPage.iniciarSesion(usuario, clave);
-			this.bienvenidaPage.hacerClicProviders();
+			this.providerPage.ingresarPaginaProviders(urlInicial);
 			this.providerPage.hacerClicBotonNuevo();
-			this.providerPage.escribirCampoNombre(nombre.trim());
-			this.providerPage.escribirCampoTelefono(telefono.trim());
+			this.providerPage.escribirCampoNombre(nombre);
+			this.providerPage.escribirCampoTelefono(telefono);
 			if(dolares==true)
 			{
 				this.providerPage.hacerClicDolares();
 			}
 			else
 			{
-				this.providerPage.hacerClicBoliviano();
+				this.providerPage.hacerClicBolivianos();
 			}
-			}catch(Exception e)
-		{
-				System.out.println(e.getStackTrace());
+				this.providerPage.hacerClicBotonGuardar();
+				String valorObtenido = this.providerPage.mensajeAlerta();
+				
+				Assert.assertEquals(valorObtenido, "Proveedor guardado con éxito");
+				MiLuzTestlink.reportarCasoDePrueba(
+						urlTestlink, 
+						keyTestlink, 
+						Integer.parseInt(idTestCaseInternoTestlink),
+						Integer.parseInt(idTestCaseExternoTestlink), 
+						Integer.parseInt(idTestPlanTestlink),
+						true,
+						Integer.parseInt(idBuildTestLink), 
+						nombreBuildTestLink, 
+						"Se ejecuto correctamente", 
+						this.idNavegadorTestlink, 
+						this.nombreNavegadorTestlink);
+				
+		}catch(AssertionError e) {
+			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: "+e.getMessage(),
+					providerPage.getWebDriver());
+			
+			MiLuzTestlink.reportarCasoDePrueba(
+					urlTestlink, 
+					keyTestlink, 
+					Integer.parseInt(idTestCaseInternoTestlink),
+					Integer.parseInt(idTestCaseExternoTestlink), 
+					Integer.parseInt(idTestPlanTestlink),
+					false,
+					Integer.parseInt(idBuildTestLink), 
+					nombreBuildTestLink, 
+					"Se ejecuto correctamente", 
+					this.idNavegadorTestlink, 
+					this.nombreNavegadorTestlink);
+			
+			Assert.fail("Error: "+e.getMessage());
+		}catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Error: "+e.getMessage());
 		}
-	}*/
+	}
+	//Insertar Sin excel
 	@Test
 	public void insertarCategoria_Criterio01() {
 		try {
@@ -76,11 +110,247 @@ public class MantenimientoProvider {
 			//	this.providerPage.hacerClicBoliviano();
 			//}
 				this.providerPage.hacerClicBotonGuardar();
-		}catch(Exception e)
-		{
-			System.out.println(e.getStackTrace());
+				String valorObtenido = this.providerPage.mensajeAlerta();
+				
+				Assert.assertEquals(valorObtenido, "Proveedor guardado con éxito");
+				
+		}catch(AssertionError e) {
+			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: "+e.getMessage(),
+					providerPage.getWebDriver());
+			
+			Assert.fail("Error: "+e.getMessage());
+		}catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Error: "+e.getMessage());
 		}
 	}
+	//Este caso de prueba es con el nombre en blanco
+	@Test(dataProvider = "DatosDeEntrada")
+	public void insertarCategoriaCriterio02(String casoPrueba, String urlInicial,String usuario,
+			String clave, String nombre,String telefono,Boolean dolares,Boolean bolivianos,String valorEsperado, String urlTestlink, String keyTestlink,
+			String idTestCaseInternoTestlink, String idTestCaseExternoTestlink, 
+			String idTestPlanTestlink, String idBuildTestLink, String nombreBuildTestLink) {
+		try {
+			this.providerPage.ingresarPaginaProviders(urlInicial);
+			this.providerPage.hacerClicBotonNuevo();
+			this.providerPage.escribirCampoNombre(nombre);
+			this.providerPage.escribirCampoTelefono(telefono);
+			if(dolares==true)
+			{
+				this.providerPage.hacerClicDolares();
+			}
+			else
+			{
+				this.providerPage.hacerClicBolivianos();
+			}
+				this.providerPage.hacerClicBotonGuardar();
+				String valorObtenido = this.providerPage.mensajeAlerta();
+				
+				Assert.assertEquals(valorObtenido, "Proveedor guardado con éxito");
+				MiLuzTestlink.reportarCasoDePrueba(
+						urlTestlink, 
+						keyTestlink, 
+						Integer.parseInt(idTestCaseInternoTestlink),
+						Integer.parseInt(idTestCaseExternoTestlink), 
+						Integer.parseInt(idTestPlanTestlink),
+						true,
+						Integer.parseInt(idBuildTestLink), 
+						nombreBuildTestLink, 
+						"Se ejecuto correctamente", 
+						this.idNavegadorTestlink, 
+						this.nombreNavegadorTestlink);
+				
+		}catch(AssertionError e) {
+			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: "+e.getMessage(),
+					providerPage.getWebDriver());
+			
+			MiLuzTestlink.reportarCasoDePrueba(
+					urlTestlink, 
+					keyTestlink, 
+					Integer.parseInt(idTestCaseInternoTestlink),
+					Integer.parseInt(idTestCaseExternoTestlink), 
+					Integer.parseInt(idTestPlanTestlink),
+					false,
+					Integer.parseInt(idBuildTestLink), 
+					nombreBuildTestLink, 
+					"Se ejecuto correctamente", 
+					this.idNavegadorTestlink, 
+					this.nombreNavegadorTestlink);
+			
+			Assert.fail("Error: "+e.getMessage());
+		}catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Error: "+e.getMessage());
+		}
+	}
+	//Editar cambiando de dolares a bolivianos
+	@Test(dataProvider = "DatosDeEntrada")
+	public void editarCategoriaCriterio01(String casoPrueba, String urlInicial,String usuario,
+			String clave, String nombre,String telefono,Boolean dolares,Boolean bolivianos,String valorEsperado, String urlTestlink, String keyTestlink,
+			String idTestCaseInternoTestlink, String idTestCaseExternoTestlink, 
+			String idTestPlanTestlink, String idBuildTestLink, String nombreBuildTestLink) {
+		try {
+			this.providerPage.ingresarPaginaProviders(urlInicial);
+			this.providerPage.escribirCajaFiltrado(nombre);
+			this.providerPage.hacerClicBotonEditar();
+			if(dolares==true)
+			{
+				this.providerPage.hacerClicDolares();
+			}
+			else
+			{
+				this.providerPage.hacerClicBolivianos();
+			}
+				this.providerPage.hacerClicBotonGuardar();
+				String valorObtenido = this.providerPage.mensajeAlerta();
+				
+				Assert.assertEquals(valorObtenido, valorEsperado);
+				MiLuzTestlink.reportarCasoDePrueba(
+						urlTestlink, 
+						keyTestlink, 
+						Integer.parseInt(idTestCaseInternoTestlink),
+						Integer.parseInt(idTestCaseExternoTestlink), 
+						Integer.parseInt(idTestPlanTestlink),
+						true,
+						Integer.parseInt(idBuildTestLink), 
+						nombreBuildTestLink, 
+						"Se ejecuto correctamente", 
+						this.idNavegadorTestlink, 
+						this.nombreNavegadorTestlink);
+				
+		}catch(AssertionError e) {
+			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: "+e.getMessage(),
+					providerPage.getWebDriver());
+			
+			MiLuzTestlink.reportarCasoDePrueba(
+					urlTestlink, 
+					keyTestlink, 
+					Integer.parseInt(idTestCaseInternoTestlink),
+					Integer.parseInt(idTestCaseExternoTestlink), 
+					Integer.parseInt(idTestPlanTestlink),
+					false,
+					Integer.parseInt(idBuildTestLink), 
+					nombreBuildTestLink, 
+					"Se ejecuto correctamente", 
+					this.idNavegadorTestlink, 
+					this.nombreNavegadorTestlink);
+			
+			Assert.fail("Error: "+e.getMessage());
+		}catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Error: "+e.getMessage());
+		}
+	}
+	//Editar cambiando el nombre del proveedor a vacio
+	@Test(dataProvider = "DatosDeEntrada")
+	public void editarCategoriaCriterio02(String casoPrueba, String urlInicial,String usuario,
+			String clave, String nombre,String telefono,Boolean dolares,Boolean bolivianos,String valorEsperado, String urlTestlink, String keyTestlink,
+			String idTestCaseInternoTestlink, String idTestCaseExternoTestlink, 
+			String idTestPlanTestlink, String idBuildTestLink, String nombreBuildTestLink) {
+		try {
+			this.providerPage.ingresarPaginaProviders(urlInicial);
+			this.providerPage.escribirCajaFiltrado(nombre);
+			this.providerPage.hacerClicBotonEditar();
+			if(dolares==true)
+			{
+				this.providerPage.hacerClicDolares();
+			}
+			else
+			{
+				this.providerPage.hacerClicBolivianos();
+			}
+				this.providerPage.hacerClicBotonGuardar();
+				String valorObtenido = this.providerPage.mensajeAlerta();
+				
+				Assert.assertEquals(valorObtenido, valorEsperado);
+				MiLuzTestlink.reportarCasoDePrueba(
+						urlTestlink, 
+						keyTestlink, 
+						Integer.parseInt(idTestCaseInternoTestlink),
+						Integer.parseInt(idTestCaseExternoTestlink), 
+						Integer.parseInt(idTestPlanTestlink),
+						true,
+						Integer.parseInt(idBuildTestLink), 
+						nombreBuildTestLink, 
+						"Se ejecuto correctamente", 
+						this.idNavegadorTestlink, 
+						this.nombreNavegadorTestlink);
+				
+		}catch(AssertionError e) {
+			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: "+e.getMessage(),
+					providerPage.getWebDriver());
+			
+			MiLuzTestlink.reportarCasoDePrueba(
+					urlTestlink, 
+					keyTestlink, 
+					Integer.parseInt(idTestCaseInternoTestlink),
+					Integer.parseInt(idTestCaseExternoTestlink), 
+					Integer.parseInt(idTestPlanTestlink),
+					false,
+					Integer.parseInt(idBuildTestLink), 
+					nombreBuildTestLink, 
+					"Se ejecuto correctamente", 
+					this.idNavegadorTestlink, 
+					this.nombreNavegadorTestlink);
+			
+			Assert.fail("Error: "+e.getMessage());
+		}catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Error: "+e.getMessage());
+		}
+	}
+	//Eliminar Coca Cola Company
+	@Test(dataProvider = "DatosDeEntrada")
+	public void eliminarCategoriaCriterio01(String casoPrueba, String urlInicial,String usuario,
+			String clave, String nombre,String telefono,Boolean dolares,Boolean bolivianos,String valorEsperado, String urlTestlink, String keyTestlink,
+			String idTestCaseInternoTestlink, String idTestCaseExternoTestlink, 
+			String idTestPlanTestlink, String idBuildTestLink, String nombreBuildTestLink) {
+		try {
+			this.providerPage.ingresarPaginaProviders(urlInicial);
+			this.providerPage.escribirCajaFiltrado(nombre);
+			this.providerPage.hacerClicBotonEliminar();
+			//this.providerPage.hacerClicBotonConfirmar();
+			String valorObtenido = this.providerPage.mensajeAlerta();
+
+			Assert.assertEquals(valorObtenido, valorEsperado);
+			MiLuzTestlink.reportarCasoDePrueba(
+					urlTestlink, 
+					keyTestlink, 
+					Integer.parseInt(idTestCaseInternoTestlink),
+					Integer.parseInt(idTestCaseExternoTestlink), 
+					Integer.parseInt(idTestPlanTestlink),
+					true,
+					Integer.parseInt(idBuildTestLink), 
+					nombreBuildTestLink, 
+					"Se ejecuto correctamente", 
+					this.idNavegadorTestlink, 
+					this.nombreNavegadorTestlink);
+
+		}catch(AssertionError e) {
+			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: "+e.getMessage(),
+					providerPage.getWebDriver());
+
+			MiLuzTestlink.reportarCasoDePrueba(
+					urlTestlink, 
+					keyTestlink, 
+					Integer.parseInt(idTestCaseInternoTestlink),
+					Integer.parseInt(idTestCaseExternoTestlink), 
+					Integer.parseInt(idTestPlanTestlink),
+					false,
+					Integer.parseInt(idBuildTestLink), 
+					nombreBuildTestLink, 
+					"Se ejecuto correctamente", 
+					this.idNavegadorTestlink, 
+					this.nombreNavegadorTestlink);
+
+			Assert.fail("Error: "+e.getMessage());
+		}catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Error: "+e.getMessage());
+		}
+	}
+
+
 	
 	@AfterTest
 	public void despuesDelTest() {
