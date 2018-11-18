@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="MiLuzTestSuite" parallel="tests">
-	<test name="MantenimientoProviderFirefox">
+	<!--  <test name="MantenimientoProviderFirefox">
 		<parameter name="navegador" value="firefox" />
 		<parameter name="testlinkIdNavegador" value="4" />
 		<parameter name="testlinkNombreNavegador" value="Firefox" />
@@ -10,7 +10,7 @@
 		<classes>
 			<class name="pe.com.test.system.testCase.MantenimientoProvider" />
 		</classes>
-	</test>
+	</test>-->
 	<test name="MantenimientoProviderChrome">
 		<parameter name="navegador" value="chrome" />
 		<parameter name="testlinkIdNavegador" value="5" />

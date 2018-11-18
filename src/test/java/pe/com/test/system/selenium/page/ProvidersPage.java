@@ -17,9 +17,9 @@ public class ProvidersPage {
 	private By checkBoxHasDebt = By.id("existeDeuda1");
 	private By botonGuardarProvider= By.xpath("/html/body/div/div/div[2]/form/div[5]/div/input");
 
-	private By textBoxFiltrar = By.id("entradaFilter");
-	private By elementoFiltradoEditar = By.xpath("//*[@id=\"tablaFull\"]/tbody/tr[1]/td[6]/a");
-	private By elementoFiltradoEliminar = By.xpath("//*[@id=\"tablaFull\"]/tbody/tr[1]/td[7]/a");
+	private By textBoxFiltrar = By.id("entradafilter");
+	private By elementoFiltradoEditar = By.xpath("//*[@id=\"tablaFull\"]/tbody/tr[3]/td[6]/a");
+	private By elementoFiltradoEliminar = By.xpath("//*[@id=\"tablaFull\"]/tbody/tr[3]/td[7]/a");
 	private By alerta = By.xpath("/html/body/header/div");
 	
 	

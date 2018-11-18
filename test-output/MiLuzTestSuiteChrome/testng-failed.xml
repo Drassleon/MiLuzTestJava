@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [MiLuzTestSuite]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MiLuzTestSuiteChrome]" parallel="tests">
   <test thread-count="5" name="MantenimientoProviderChrome(failed)" parallel="tests">
     <parameter name="navegador" value="chrome"/>
     <parameter name="testlinkIdNavegador" value="5"/>
     <parameter name="testlinkNombreNavegador" value="Chrome"/>
     <parameter name="remoto" value="0"/>
-    <parameter name="rutaArchivoExcel" value="D:\SoftwareExperimentos\RegistrarProveedorData.xlsx"/>
+    <parameter name="rutaArchivoExcel" value="D:\Downloads\RegistrarCategoriaData.xlsx"/>
     <classes>
       <class name="pe.com.test.system.testCase.MantenimientoProvider">
         <methods>
+          <include name="insertarCategoriaCriterio01"/>
           <include name="despuesDelTest"/>
-          <include name="ainsertarCategoria_Criterio01"/>
-          <include name="deditarCategoria_Criterio02"/>
-          <include name="ceditarCategoria_Criterio01"/>
+          <include name="eliminarCategoriaCriterio01"/>
+          <include name="editarCategoriaCriterio01"/>
+          <include name="insertarCategoriaCriterio02"/>
+          <include name="editarCategoriaCriterio02"/>
           <include name="antesDelTest"/>
-          <include name="binsertarCategoria_Criterio02"/>
         </methods>
       </class> <!-- pe.com.test.system.testCase.MantenimientoProvider -->
     </classes>
   </test> <!-- MantenimientoProviderChrome(failed) -->
-</suite> <!-- Failed suite [MiLuzTestSuite] -->
+</suite> <!-- Failed suite [MiLuzTestSuiteChrome] -->
