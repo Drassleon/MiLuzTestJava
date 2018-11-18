@@ -25,7 +25,7 @@ public final class MiLuzDriver {
 					DesiredCapabilities capabilities=DesiredCapabilities.firefox();
 				    webDriver = new RemoteWebDriver(server, capabilities);
 				}else{
-					System.setProperty("webdriver.gecko.driver", "D:\\SoftwareExperimentos\\geckodriver.exe");
+					System.setProperty("webdriver.gecko.driver", "C:\\SoftwareExperimentos\\geckodriver.exe");
 					webDriver = new FirefoxDriver();
 				}
 				break;
@@ -35,7 +35,7 @@ public final class MiLuzDriver {
 					DesiredCapabilities capabilities=DesiredCapabilities.chrome();
 				    webDriver = new RemoteWebDriver(server, capabilities);
 				}else{
-					System.setProperty("webdriver.chrome.driver", "D:\\SoftwareExperimentos\\chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver", "C:\\SoftwareExperimentos\\chromedriver.exe");
 					webDriver = new ChromeDriver();
 				}
 				break;
@@ -45,7 +45,7 @@ public final class MiLuzDriver {
 					DesiredCapabilities capabilities=DesiredCapabilities.edge();
 					webDriver = new RemoteWebDriver(server,capabilities);
 				}else {
-					System.setProperty("webdriver.edge.driver", "D:\\\\SoftwareExperimentos\\\\MicrosoftWebDriver.exe");
+					System.setProperty("webdriver.edge.driver", "C:\\SoftwareExperimentos\\MicrosoftWebDriver.exe");
 					webDriver = new EdgeDriver();
 				}
 			}

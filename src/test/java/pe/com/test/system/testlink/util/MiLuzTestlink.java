@@ -59,7 +59,7 @@ public final class MiLuzTestlink {
 			// ID de Build
 			// Nombre del Build
 			// Mensaje
-			// Usuario Ivitado
+			// Usuario Invitado
 			// ID del Bug
 			// ID de Plataforma
 			// Nombre Plataforma

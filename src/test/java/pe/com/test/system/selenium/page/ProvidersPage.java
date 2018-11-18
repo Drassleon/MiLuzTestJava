@@ -62,9 +62,10 @@ public class ProvidersPage {
 
 	}
 	
-	public void hacerClicBotonGuardar() throws Exception{
+	public String hacerClicBotonGuardar() throws Exception{
 		this.webDriver.findElement(botonGuardarProvider).click();
 		Thread.sleep(2000);
+		return this.webDriver.findElement(alerta).getText();
 	}
 	
 	public void hacerClicTieneDeuda() throws Exception{

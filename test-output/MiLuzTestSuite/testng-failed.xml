@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [MiLuzTestSuite]" parallel="tests">
+  <test thread-count="5" name="MantenimientoProviderFirefox(failed)" parallel="tests">
+    <parameter name="navegador" value="firefox"/>
+    <parameter name="testlinkIdNavegador" value="4"/>
+    <parameter name="testlinkNombreNavegador" value="Firefox"/>
+    <parameter name="remoto" value="0"/>
+    <parameter name="rutaArchivoExcel" value="C:\Data\RegistrarProveedorData.xlsx"/>
+    <classes>
+      <class name="pe.com.test.system.testCase.MantenimientoProvider">
+        <methods>
+          <include name="despuesDelTest"/>
+          <include name="b_insertarCategoria_Criterio02" invocation-numbers="0 1"/>
+          <include name="antesDelTest"/>
+          <include name="a_insertarCategoria_Criterio01" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- pe.com.test.system.testCase.MantenimientoProvider -->
+    </classes>
+  </test> <!-- MantenimientoProviderFirefox(failed) -->
   <test thread-count="5" name="MantenimientoProviderChrome(failed)" parallel="tests">
     <parameter name="navegador" value="chrome"/>
     <parameter name="testlinkIdNavegador" value="5"/>
     <parameter name="testlinkNombreNavegador" value="Chrome"/>
     <parameter name="remoto" value="0"/>
-    <parameter name="rutaArchivoExcel" value="D:\SoftwareExperimentos\RegistrarProveedorData.xlsx"/>
+    <parameter name="rutaArchivoExcel" value="C:\Data\RegistrarProveedorData.xlsx"/>
     <classes>
       <class name="pe.com.test.system.testCase.MantenimientoProvider">
         <methods>
           <include name="despuesDelTest"/>
-          <include name="ainsertarCategoria_Criterio01"/>
-          <include name="deditarCategoria_Criterio02"/>
-          <include name="ceditarCategoria_Criterio01"/>
+          <include name="b_insertarCategoria_Criterio02" invocation-numbers="0 1"/>
           <include name="antesDelTest"/>
-          <include name="binsertarCategoria_Criterio02"/>
         </methods>
       </class> <!-- pe.com.test.system.testCase.MantenimientoProvider -->
     </classes>

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="MiLuzTestSuite" duration-ms="40343" started-at="2018-11-08T20:58:04Z" finished-at="2018-11-08T20:58:44Z">
+  <suite name="MiLuzTestSuite" duration-ms="72343" started-at="2018-11-18T23:35:59Z" finished-at="2018-11-18T23:37:11Z">
     <groups>
     </groups>
-    <test name="MantenimientoProviderChrome" duration-ms="40343" started-at="2018-11-08T20:58:04Z" finished-at="2018-11-08T20:58:44Z">
+    <test name="MantenimientoProviderFirefox" duration-ms="72343" started-at="2018-11-18T23:35:59Z" finished-at="2018-11-18T23:37:11Z">
       <class name="pe.com.test.system.testCase.MantenimientoProvider">
-        <test-method status="PASS" signature="antesDelTest(java.lang.String, int, int, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1794d431]" name="antesDelTest" is-config="true" duration-ms="2694" started-at="2018-11-08T20:58:04Z" finished-at="2018-11-08T20:58:06Z">
+        <test-method status="PASS" signature="antesDelTest(java.lang.String, int, int, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="antesDelTest" is-config="true" duration-ms="5534" started-at="2018-11-18T23:35:59Z" finished-at="2018-11-18T23:36:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
             <param index="1">
@@ -21,39 +21,327 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[4]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- antesDelTest -->
-        <test-method status="PASS" signature="ainsertarCategoria_Criterio01()[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1794d431]" name="ainsertarCategoria_Criterio01" duration-ms="11321" started-at="2018-11-08T20:58:06Z" finished-at="2018-11-08T20:58:18Z">
+        <test-method status="PASS" signature="a_insertarCategoria_Criterio01(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="a_insertarCategoria_Criterio01" duration-ms="17864" started-at="2018-11-18T23:36:05Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-18T23:36:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Registrar Proveedor - Flujo Básico]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:8080/login]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[marcelo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Samsung]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[987654321]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Proveedor creado con éxito!]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[c2ba2f17a374eb08746d1a30bd837bf7]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Build 01]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ainsertarCategoria_Criterio01 -->
-        <test-method status="PASS" signature="binsertarCategoria_Criterio02()[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1794d431]" name="binsertarCategoria_Criterio02" duration-ms="8478" started-at="2018-11-08T20:58:18Z" finished-at="2018-11-08T20:58:26Z">
+        </test-method> <!-- a_insertarCategoria_Criterio01 -->
+        <test-method status="PASS" signature="a_insertarCategoria_Criterio01(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="a_insertarCategoria_Criterio01" duration-ms="15635" started-at="2018-11-18T23:36:23Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-18T23:36:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Registrar Proveedor - Flujo Alternativo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:8080/login]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[marcelo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[987654321]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[El nombre de proveedor no puede ser vacío]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[c2ba2f17a374eb08746d1a30bd837bf7]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Build 01]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- binsertarCategoria_Criterio02 -->
-        <test-method status="PASS" signature="ceditarCategoria_Criterio01()[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1794d431]" name="ceditarCategoria_Criterio01" duration-ms="8572" started-at="2018-11-08T20:58:26Z" finished-at="2018-11-08T20:58:35Z">
+        </test-method> <!-- a_insertarCategoria_Criterio01 -->
+        <test-method status="PASS" signature="b_insertarCategoria_Criterio02(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="b_insertarCategoria_Criterio02" duration-ms="15857" started-at="2018-11-18T23:36:39Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-18T23:36:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Registrar Proveedor - Flujo Básico]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:8080/login]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[marcelo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Samsung]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[987654321]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Proveedor creado con éxito!]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[c2ba2f17a374eb08746d1a30bd837bf7]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Build 01]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ceditarCategoria_Criterio01 -->
-        <test-method status="PASS" signature="deditarCategoria_Criterio02()[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1794d431]" name="deditarCategoria_Criterio02" duration-ms="8560" started-at="2018-11-08T20:58:35Z" finished-at="2018-11-08T20:58:43Z">
+        </test-method> <!-- b_insertarCategoria_Criterio02 -->
+        <test-method status="PASS" signature="b_insertarCategoria_Criterio02(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="b_insertarCategoria_Criterio02" duration-ms="15588" started-at="2018-11-18T23:36:55Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-18T23:37:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Registrar Proveedor - Flujo Alternativo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:8080/login]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[marcelo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[987654321]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[El nombre de proveedor no puede ser vacío]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[c2ba2f17a374eb08746d1a30bd837bf7]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Build 01]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deditarCategoria_Criterio02 -->
-        <test-method status="PASS" signature="despuesDelTest()[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1794d431]" name="despuesDelTest" is-config="true" duration-ms="698" started-at="2018-11-08T20:58:43Z" finished-at="2018-11-08T20:58:44Z">
+        </test-method> <!-- b_insertarCategoria_Criterio02 -->
+        <test-method status="PASS" signature="despuesDelTest()[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="despuesDelTest" is-config="true" duration-ms="1161" started-at="2018-11-18T23:37:10Z" finished-at="2018-11-18T23:37:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- despuesDelTest -->
       </class> <!-- pe.com.test.system.testCase.MantenimientoProvider -->
-    </test> <!-- MantenimientoProviderChrome -->
+    </test> <!-- MantenimientoProviderFirefox -->
   </suite> <!-- MiLuzTestSuite -->
 </testng-results>
