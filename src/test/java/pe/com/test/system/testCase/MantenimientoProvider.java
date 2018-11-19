@@ -20,7 +20,7 @@ public class MantenimientoProvider {
 	private IniciarSesionPage iniciarSesionPage;
 	private BienvenidaPage bienvenidaPage;
 	private ProvidersPage providerPage;
-	private String rutaCarpetaError="D:\\SoftwareExperimentos\\CapturasPantalla\\Proveedores";
+	private String rutaCarpetaError="C:\\SoftwareExperimentos\\CapturasPantalla\\Proveedores";
 	private Integer idNavegadorTestlink;
 	private String nombreNavegadorTestlink;
 	
@@ -38,11 +38,23 @@ public class MantenimientoProvider {
 	@DataProvider(name="DatosDeEntradaInsertar")
 	public static Object[][] datosDeEntradaInsertar(ITestContext contexto){
 		String rutaArchivo = contexto.getCurrentXmlTest().getParameter("rutaArchivoExcel");
-		return Excel.leerExcel(rutaArchivo);
+		return Excel.leerExcel(rutaArchivo, 0);
+	}
+	
+	@DataProvider(name="DatosDeEntradaEditar")
+	public static Object[][] datosDeEntradaEditar(ITestContext contexto){
+		String rutaArchivo = contexto.getCurrentXmlTest().getParameter("rutaArchivoExcel");
+		return Excel.leerExcel(rutaArchivo, 1);
+	}
+	
+	@DataProvider(name="DatosDeEntradaEliminar")
+	public static Object[][] datosDeEntradaEliminar(ITestContext contexto){
+		String rutaArchivo = contexto.getCurrentXmlTest().getParameter("rutaArchivoExcel");
+		return Excel.leerExcel(rutaArchivo, 2);
 	}
 	
 	@Test(dataProvider = "DatosDeEntradaInsertar")
-	public void a_insertarCategoria_Criterio01(String casoPrueba, String urlInicial, String usuario, String clave, 
+	public void a_insertarCategoria(String casoPrueba, String urlInicial, String usuario, String clave, 
 			String nombre, String numeroTelefono, String valorEsperado, String urlTestlink, String keyTestlink, String idTestCaseInternoTestlink,
 			String idTestCaseExternoTestlink, String idTestPlanTestlink, String idBuildTestlink,
 			String nombreBuildTestlink) {
@@ -91,9 +103,9 @@ public class MantenimientoProvider {
 		}
 	}
 	
-	@Test(dataProvider = "DatosDeEntradaInsertar")
-	public void b_insertarCategoria_Criterio02(String casoPrueba, String urlInicial, String usuario, String clave, 
-			String nombre, String numeroTelefono, String valorEsperado, String urlTestlink, String keyTestlink, String idTestCaseInternoTestlink,
+	@Test(dataProvider = "DatosDeEntradaEditar")
+	public void b_editarCategoria(String casoPrueba, String urlInicial, String usuario, String clave, 
+			String nombreFiltrado, String valorEsperado, String urlTestlink, String keyTestlink, String idTestCaseInternoTestlink,
 			String idTestCaseExternoTestlink, String idTestPlanTestlink, String idBuildTestlink,
 			String nombreBuildTestlink) {
 		try {
@@ -102,14 +114,56 @@ public class MantenimientoProvider {
 			
 			this.bienvenidaPage.hacerClicPestañaProveedores();
 			
-			this.providerPage.hacerClicBotonNuevo();
-			this.providerPage.escribirCampoNombre(nombre.trim());
-			this.providerPage.escribirCampoTelefono(numeroTelefono.trim());
-			
+			this.providerPage.escribirCajaFiltrado(nombreFiltrado.trim());
+			this.providerPage.hacerClicBotonEditar();
 			this.providerPage.hacerClicBolivianos();
-			this.providerPage.hacerClicTieneDeuda();
 			
 			String valorObtenido = this.providerPage.hacerClicBotonGuardar();
+			
+			Assert.assertEquals(valorObtenido, valorEsperado);
+			
+			this.iniciarSesionPage.cerrarSesion();
+			
+			/*
+			MiLuzTestLink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
+					Integer.parseInt(idTestCaseExternoTestlink), Integer.parseInt(idTestPlanTestlink), true, 
+					Integer.parseInt(idBuildTestlink), nombreBuildTestlink, "Se ejecuto correctamente", 
+					this.idNavegadorTestlink, this.nombreNavegadorTestlink);
+					*/
+		}
+		catch(AssertionError e) {
+			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: " + e.getMessage(),
+					providerPage.getWebDriver());
+			
+			/*
+			MiLuzTestLink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
+					Integer.parseInt(idTestCaseExternoTestlink), Integer.parseInt(idTestPlanTestlink), false, 
+					Integer.parseInt(idBuildTestlink), nombreBuildTestlink, "Error:"+e.getMessage(), 
+					this.idNavegadorTestlink, this.nombreNavegadorTestlink);
+					*/
+			
+			Assert.fail(e.getMessage());
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Error: "+e.getMessage());
+		}
+	}
+	
+	@Test(dataProvider = "DatosDeEntradaEliminar")
+	public void c_eliminarCategoria(String casoPrueba, String urlInicial, String usuario, String clave, 
+			String nombreFiltrado, String valorEsperado, String urlTestlink, String keyTestlink, String idTestCaseInternoTestlink,
+			String idTestCaseExternoTestlink, String idTestPlanTestlink, String idBuildTestlink,
+			String nombreBuildTestlink) {
+		try {
+			this.iniciarSesionPage.ingresarPaginaIniciarSesion(urlInicial);
+			this.iniciarSesionPage.iniciarSesion(usuario, clave);
+			
+			this.bienvenidaPage.hacerClicPestañaProveedores();
+			
+			this.providerPage.escribirCajaFiltrado(nombreFiltrado.trim());
+			
+			String valorObtenido = this.providerPage.hacerClicBotonEliminar();;
 			
 			Assert.assertEquals(valorObtenido, valorEsperado);
 			

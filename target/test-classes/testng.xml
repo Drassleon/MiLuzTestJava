@@ -1,24 +1,27 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="MiLuzTestSuite" parallel="tests">
 
+	<!--
 	<test name="MantenimientoProviderFirefox">
 		<parameter name="navegador" value="firefox" />
 		<parameter name="testlinkIdNavegador" value="4" />
 		<parameter name="testlinkNombreNavegador" value="Firefox" />
 		<parameter name="rutaArchivoExcel"
-			value="C:\Data\RegistrarProveedorData.xlsx" />
+			value="C:\Data\MantenimientoProveedor.xlsx" />
 		<parameter name="remoto" value="0" />
 		<classes>
 			<class name="pe.com.test.system.testCase.MantenimientoProvider" />
 		</classes>
 	</test>
+	-->
 	 
+	  
 	<test name="MantenimientoProviderChrome">
 		<parameter name="navegador" value="chrome" />
 		<parameter name="testlinkIdNavegador" value="5" />
 		<parameter name="testlinkNombreNavegador" value="Chrome" />
 		<parameter name="rutaArchivoExcel"
-			value="C:\Data\RegistrarProveedorData.xlsx" />
+			value="C:\Data\MantenimientoProveedor.xlsx" />
 		<parameter name="remoto" value="0" />
 		<classes>
 			<class name="pe.com.test.system.testCase.MantenimientoProvider" />
@@ -31,7 +34,7 @@
 		<parameter name="testlinkIdNavegador" value="6" />
 		<parameter name="testlinkNombreNavegador" value="Microsoft Edge" />
 		<parameter name="rutaArchivoExcel"
-			value="C:\Data\RegistrarProveedorData.xlsx" />
+			value="C:\Data\MantenimientoProveedor.xlsx" />
 		<parameter name="remoto" value="0" />
 		<classes>
 			<class name="pe.com.test.system.testCase.MantenimientoProvider" />

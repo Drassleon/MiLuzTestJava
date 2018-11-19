@@ -12,14 +12,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Excel {
 
 	
-	public static String[][] leerExcel(String rutaArchivo) {
+	public static String[][] leerExcel(String rutaArchivo, Integer pagina) {
 		String[][] lista = null;
 		int i = 0;
 		String valor = "";
 		try {
 			FileInputStream archivo = new FileInputStream(new File(rutaArchivo));
 			XSSFWorkbook archivoExcel = new XSSFWorkbook (archivo);
-			XSSFSheet  hojaExcel = archivoExcel.getSheetAt(0);
+			XSSFSheet  hojaExcel = archivoExcel.getSheetAt(pagina);
 			Iterator<Row> filas = hojaExcel.iterator();
 			filas.next();
 			lista = new String[hojaExcel.getLastRowNum()][];
