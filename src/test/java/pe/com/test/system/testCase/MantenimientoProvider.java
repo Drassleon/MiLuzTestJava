@@ -54,7 +54,7 @@ public class MantenimientoProvider {
 	}
 	
 	@Test(dataProvider = "DatosDeEntradaInsertar")
-	public void a_insertarCategoria(String casoPrueba, String urlInicial, String usuario, String clave, 
+	public void a_insertarProveedor(String casoPrueba, String urlInicial, String usuario, String clave, 
 			String nombre, String numeroTelefono, String valorEsperado, String urlTestlink, String keyTestlink, String idTestCaseInternoTestlink,
 			String idTestCaseExternoTestlink, String idTestPlanTestlink, String idBuildTestlink,
 			String nombreBuildTestlink) {
@@ -78,23 +78,22 @@ public class MantenimientoProvider {
 			this.iniciarSesionPage.cerrarSesion();
 			
 			/*
-			MiLuzTestLink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
+			MiLuzTestlink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
 					Integer.parseInt(idTestCaseExternoTestlink), Integer.parseInt(idTestPlanTestlink), true, 
 					Integer.parseInt(idBuildTestlink), nombreBuildTestlink, "Se ejecuto correctamente", 
 					this.idNavegadorTestlink, this.nombreNavegadorTestlink);
-					*/
+			*/
 		}
 		catch(AssertionError e) {
 			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: " + e.getMessage(),
 					providerPage.getWebDriver());
 			
 			/*
-			MiLuzTestLink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
+			MiLuzTestlink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
 					Integer.parseInt(idTestCaseExternoTestlink), Integer.parseInt(idTestPlanTestlink), false, 
 					Integer.parseInt(idBuildTestlink), nombreBuildTestlink, "Error:"+e.getMessage(), 
 					this.idNavegadorTestlink, this.nombreNavegadorTestlink);
-					*/
-			
+			*/
 			Assert.fail(e.getMessage());
 		}
 		catch (Exception e) {
@@ -104,7 +103,7 @@ public class MantenimientoProvider {
 	}
 	
 	@Test(dataProvider = "DatosDeEntradaEditar")
-	public void b_editarCategoria(String casoPrueba, String urlInicial, String usuario, String clave, 
+	public void b_editarProveedor(String casoPrueba, String urlInicial, String usuario, String clave, 
 			String nombreFiltrado, String valorEsperado, String urlTestlink, String keyTestlink, String idTestCaseInternoTestlink,
 			String idTestCaseExternoTestlink, String idTestPlanTestlink, String idBuildTestlink,
 			String nombreBuildTestlink) {
@@ -125,22 +124,22 @@ public class MantenimientoProvider {
 			this.iniciarSesionPage.cerrarSesion();
 			
 			/*
-			MiLuzTestLink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
+			MiLuzTestlink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
 					Integer.parseInt(idTestCaseExternoTestlink), Integer.parseInt(idTestPlanTestlink), true, 
 					Integer.parseInt(idBuildTestlink), nombreBuildTestlink, "Se ejecuto correctamente", 
 					this.idNavegadorTestlink, this.nombreNavegadorTestlink);
-					*/
+			*/		
 		}
 		catch(AssertionError e) {
 			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: " + e.getMessage(),
 					providerPage.getWebDriver());
 			
 			/*
-			MiLuzTestLink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
+			MiLuzTestlink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
 					Integer.parseInt(idTestCaseExternoTestlink), Integer.parseInt(idTestPlanTestlink), false, 
 					Integer.parseInt(idBuildTestlink), nombreBuildTestlink, "Error:"+e.getMessage(), 
 					this.idNavegadorTestlink, this.nombreNavegadorTestlink);
-					*/
+			*/		
 			
 			Assert.fail(e.getMessage());
 		}
@@ -151,7 +150,7 @@ public class MantenimientoProvider {
 	}
 	
 	@Test(dataProvider = "DatosDeEntradaEliminar")
-	public void c_eliminarCategoria(String casoPrueba, String urlInicial, String usuario, String clave, 
+	public void c_eliminarProveedor(String casoPrueba, String urlInicial, String usuario, String clave, 
 			String nombreFiltrado, String valorEsperado, String urlTestlink, String keyTestlink, String idTestCaseInternoTestlink,
 			String idTestCaseExternoTestlink, String idTestPlanTestlink, String idBuildTestlink,
 			String nombreBuildTestlink) {
@@ -170,22 +169,22 @@ public class MantenimientoProvider {
 			this.iniciarSesionPage.cerrarSesion();
 			
 			/*
-			MiLuzTestLink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
+			MiLuzTestlink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
 					Integer.parseInt(idTestCaseExternoTestlink), Integer.parseInt(idTestPlanTestlink), true, 
 					Integer.parseInt(idBuildTestlink), nombreBuildTestlink, "Se ejecuto correctamente", 
 					this.idNavegadorTestlink, this.nombreNavegadorTestlink);
-					*/
+			*/		
 		}
 		catch(AssertionError e) {
 			Utilitario.caputarPantallarError(this.rutaCarpetaError, "Error: " + e.getMessage(),
 					providerPage.getWebDriver());
 			
 			/*
-			MiLuzTestLink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
+			MiLuzTestlink.reportarCasoDePrueba(urlTestlink, keyTestlink, Integer.parseInt(idTestCaseInternoTestlink),
 					Integer.parseInt(idTestCaseExternoTestlink), Integer.parseInt(idTestPlanTestlink), false, 
 					Integer.parseInt(idBuildTestlink), nombreBuildTestlink, "Error:"+e.getMessage(), 
 					this.idNavegadorTestlink, this.nombreNavegadorTestlink);
-					*/
+			*/		
 			
 			Assert.fail(e.getMessage());
 		}

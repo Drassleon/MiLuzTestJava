@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="2" ignored="0" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="MiLuzTestSuite" duration-ms="56027" started-at="2018-11-19T04:51:54Z" finished-at="2018-11-19T04:52:50Z">
+  <suite name="MiLuzTestSuite" duration-ms="67112" started-at="2018-11-22T03:46:41Z" finished-at="2018-11-22T03:47:48Z">
     <groups>
     </groups>
-    <test name="MantenimientoProviderChrome" duration-ms="56027" started-at="2018-11-19T04:51:54Z" finished-at="2018-11-19T04:52:50Z">
+    <test name="MantenimientoProviderChrome" duration-ms="67112" started-at="2018-11-22T03:46:41Z" finished-at="2018-11-22T03:47:48Z">
       <class name="pe.com.test.system.testCase.MantenimientoProvider">
-        <test-method status="PASS" signature="antesDelTest(java.lang.String, int, int, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="antesDelTest" is-config="true" duration-ms="2998" started-at="2018-11-19T04:51:54Z" finished-at="2018-11-19T04:51:57Z">
+        <test-method status="PASS" signature="antesDelTest(java.lang.String, int, int, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="antesDelTest" is-config="true" duration-ms="5296" started-at="2018-11-22T03:46:41Z" finished-at="2018-11-22T03:46:46Z">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- antesDelTest -->
-        <test-method status="PASS" signature="a_insertarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="a_insertarCategoria" duration-ms="16353" started-at="2018-11-19T04:51:58Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-19T04:52:15Z">
+        <test-method status="FAIL" signature="a_insertarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="a_insertarCategoria" duration-ms="37475" started-at="2018-11-22T03:46:46Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-22T03:47:23Z">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+Data provider mismatch
+Method: a_insertarCategoria([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) ,null,null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: a_insertarCategoria([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) ,null,null]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:45)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:796)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:983)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- a_insertarCategoria -->
+        <test-method status="PASS" signature="a_insertarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="a_insertarCategoria" duration-ms="19432" started-at="2018-11-22T03:46:46Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-22T03:47:06Z">
           <params>
             <param index="0">
               <value>
@@ -42,7 +76,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:8080/login]]>
+                <![CDATA[http://localhost:8081/login]]>
               </value>
             </param>
             <param index="2">
@@ -72,17 +106,17 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
+                <![CDATA[http://localhost/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[c2ba2f17a374eb08746d1a30bd837bf7]]>
+                <![CDATA[4baad71ddeedfb85be20e0062f91ceea]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[14]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="10">
@@ -92,7 +126,7 @@
             </param>
             <param index="11">
               <value>
-                <![CDATA[17]]>
+                <![CDATA[7]]>
               </value>
             </param>
             <param index="12">
@@ -109,7 +143,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- a_insertarCategoria -->
-        <test-method status="PASS" signature="a_insertarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="a_insertarCategoria" duration-ms="15667" started-at="2018-11-19T04:52:15Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-19T04:52:30Z">
+        <test-method status="PASS" signature="a_insertarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="a_insertarCategoria" duration-ms="17512" started-at="2018-11-22T03:47:06Z" data-provider="DatosDeEntradaInsertar" finished-at="2018-11-22T03:47:23Z">
           <params>
             <param index="0">
               <value>
@@ -118,7 +152,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:8080/login]]>
+                <![CDATA[http://localhost:8081/login]]>
               </value>
             </param>
             <param index="2">
@@ -148,17 +182,17 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
+                <![CDATA[http://localhost/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[c2ba2f17a374eb08746d1a30bd837bf7]]>
+                <![CDATA[4baad71ddeedfb85be20e0062f91ceea]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[14]]>
+                <![CDATA[8]]>
               </value>
             </param>
             <param index="10">
@@ -168,7 +202,7 @@
             </param>
             <param index="11">
               <value>
-                <![CDATA[17]]>
+                <![CDATA[7]]>
               </value>
             </param>
             <param index="12">
@@ -185,16 +219,16 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- a_insertarCategoria -->
-        <test-method status="PASS" signature="b_editarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="b_editarCategoria" duration-ms="11862" started-at="2018-11-19T04:52:30Z" data-provider="DatosDeEntradaEditar" finished-at="2018-11-19T04:52:42Z">
+        <test-method status="PASS" signature="b_editarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="b_editarCategoria" duration-ms="13877" started-at="2018-11-22T03:47:23Z" data-provider="DatosDeEntradaEditar" finished-at="2018-11-22T03:47:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Actualizar Proveedor - Flujo Básico]]>
+                <![CDATA[Editar Proveedor]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:8080/login]]>
+                <![CDATA[http://localhost:8081/login]]>
               </value>
             </param>
             <param index="2">
@@ -219,27 +253,27 @@
             </param>
             <param index="6">
               <value>
-                <![CDATA[http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
+                <![CDATA[http://localhost/testlink/lib/api/xmlrpc/v1/xmlrpc.php]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[c2ba2f17a374eb08746d1a30bd837bf7]]>
+                <![CDATA[4baad71ddeedfb85be20e0062f91ceea]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[14]]>
+                <![CDATA[35]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[3]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[17]]>
+                <![CDATA[7]]>
               </value>
             </param>
             <param index="11">
@@ -256,16 +290,50 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- b_editarCategoria -->
-        <test-method status="PASS" signature="c_eliminarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="c_eliminarCategoria" duration-ms="7628" started-at="2018-11-19T04:52:42Z" data-provider="DatosDeEntradaEliminar" finished-at="2018-11-19T04:52:50Z">
+        <test-method status="FAIL" signature="c_eliminarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="c_eliminarCategoria" duration-ms="9679" started-at="2018-11-22T03:47:37Z" data-provider="DatosDeEntradaEliminar" finished-at="2018-11-22T03:47:47Z">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+Data provider mismatch
+Method: c_eliminarCategoria([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) ,null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: c_eliminarCategoria([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) ,null]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:45)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:796)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:983)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- c_eliminarCategoria -->
+        <test-method status="PASS" signature="c_eliminarCategoria(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="c_eliminarCategoria" duration-ms="9600" started-at="2018-11-22T03:47:37Z" data-provider="DatosDeEntradaEliminar" finished-at="2018-11-22T03:47:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Eliminar Proveedor - Flujo Básico]]>
+                <![CDATA[Eliminar Proveedor]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:8080/login]]>
+                <![CDATA[http://localhost:8081/login]]>
               </value>
             </param>
             <param index="2">
@@ -300,7 +368,7 @@
             </param>
             <param index="8">
               <value>
-                <![CDATA[14]]>
+                <![CDATA[44]]>
               </value>
             </param>
             <param index="9">
@@ -310,7 +378,7 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[17]]>
+                <![CDATA[7]]>
               </value>
             </param>
             <param index="11">
@@ -327,7 +395,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- c_eliminarCategoria -->
-        <test-method status="PASS" signature="despuesDelTest()[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="despuesDelTest" is-config="true" duration-ms="659" started-at="2018-11-19T04:52:50Z" finished-at="2018-11-19T04:52:50Z">
+        <test-method status="PASS" signature="despuesDelTest()[pri:0, instance:pe.com.test.system.testCase.MantenimientoProvider@1a968a59]" name="despuesDelTest" is-config="true" duration-ms="665" started-at="2018-11-22T03:47:47Z" finished-at="2018-11-22T03:47:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- despuesDelTest -->

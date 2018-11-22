@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public final class MiLuzDriver {
 
-	private static final String URL_HUB = "http://localhost:8080/proveedor/listar";
+	private static final String URL_HUB = "http://localhost:8081/login";
 	
 	public final static WebDriver inicializarDriver(String navegador, boolean remoto) {
 		WebDriver webDriver = null;

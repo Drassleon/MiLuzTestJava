@@ -67,7 +67,8 @@ public final class MiLuzTestlink {
 			// Sobre Escribir
 			URL testlinkUrl = new URL(urlTestlink);
 			TestLinkAPI testlinkApi = new TestLinkAPI(testlinkUrl, keyTestlink);
-			testlinkApi.reportTCResult(idTestCaseInterno, idTestCaseExterno, idTestPlan, paso ? ExecutionStatus.PASSED : ExecutionStatus.FAILED, idBuild,
+			testlinkApi.reportTCResult(idTestCaseInterno, idTestCaseExterno, idTestPlan
+					, paso ? ExecutionStatus.PASSED : ExecutionStatus.FAILED, idBuild,
 					nombreBuild, mensaje, false, "Ninguno", idPlataforma, nombrePlataforma, null, false);
 
 		} catch (Exception e) {

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-MiLuzTestSuite">
-              <span class="suite-name border-passed">MiLuzTestSuite</span>
+              <span class="suite-name border-failed">MiLuzTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-MiLuzTestSuite" class="hide-methods failed suite-MiLuzTestSuite"> (hide)</a> <!-- hide-methods failed suite-MiLuzTestSuite -->
+                      <a href="#" panel-name="suite-MiLuzTestSuite" class="show-methods failed suite-MiLuzTestSuite"> (show)</a> <!-- show-methods failed suite-MiLuzTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-MiLuzTestSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="a_insertarCategoria">a_insertarCategoria</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="c_eliminarCategoria">c_eliminarCategoria</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-MiLuzTestSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,22 +121,22 @@
                     <div class="method-list-content passed suite-MiLuzTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8080/login, marcelo, 123456, , 987654321, ...)">a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8080/login, marcelo, 123456, , 987654321, ...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8081/login, marcelo, 123456, Samsung, 987654321...)">a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8081/login, marcelo, 123456, Samsung, 987654321...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, 987654321...)">a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, 987654321...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8081/login, marcelo, 123456, , 987654321, ...)">a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8081/login, marcelo, 123456, , 987654321, ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="b_editarCategoria(Actualizar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedo...)">b_editarCategoria(Actualizar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedo...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="b_editarCategoria(Editar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor editado con éxito...)">b_editarCategoria(Editar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor editado con éxito...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="c_eliminarCategoria(Eliminar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedor ...)">c_eliminarCategoria(Eliminar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedor ...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-MiLuzTestSuite" title="pe.com.test.system.testCase.MantenimientoProvider" hash-for-method="c_eliminarCategoria(Eliminar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor eliminado con é...)">c_eliminarCategoria(Eliminar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor eliminado con é...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-MiLuzTestSuite -->
@@ -132,6 +151,48 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MiLuzTestSuite" class="panel MiLuzTestSuite">
+          <div class="suite-MiLuzTestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">pe.com.test.system.testCase.MantenimientoProvider</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="a_insertarCategoria">
+                  </a> <!-- a_insertarCategoria -->
+                  <span class="method-name">a_insertarCategoria</span>
+                  <div class="stack-trace">org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: a_insertarCategoria([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) ,null,null]
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="c_eliminarCategoria">
+                  </a> <!-- c_eliminarCategoria -->
+                  <span class="method-name">c_eliminarCategoria</span>
+                  <div class="stack-trace">org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: c_eliminarCategoria([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) ,null]
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MiLuzTestSuite-class-failed -->
           <div class="suite-MiLuzTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -140,34 +201,34 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8080/login, marcelo, 123456, , 987654321, ...)">
-                  </a> <!-- a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8080/login, marcelo, 123456, , 987654321, ...) -->
+                  <a name="a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8081/login, marcelo, 123456, Samsung, 987654321...)">
+                  </a> <!-- a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8081/login, marcelo, 123456, Samsung, 987654321...) -->
                   <span class="method-name">a_insertarCategoria</span>
-                  <span class="parameters">(Registrar Proveedor - Flujo Alternativo, http://localhost:8080/login, marcelo, 123456, , 987654321, El nombre de proveedor no puede ser vacío, http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php, c2ba2f17a374eb08746d1a30bd837bf7, 14, 1, 17, 1, Build 01)</span>
+                  <span class="parameters">(Registrar Proveedor - Flujo Básico, http://localhost:8081/login, marcelo, 123456, Samsung, 987654321, Proveedor creado con éxito!, http://localhost/testlink/lib/api/xmlrpc/v1/xmlrpc.php, 4baad71ddeedfb85be20e0062f91ceea, 5, 1, 7, 1, Build 01)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, 987654321...)">
-                  </a> <!-- a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, 987654321...) -->
+                  <a name="a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8081/login, marcelo, 123456, , 987654321, ...)">
+                  </a> <!-- a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8081/login, marcelo, 123456, , 987654321, ...) -->
                   <span class="method-name">a_insertarCategoria</span>
-                  <span class="parameters">(Registrar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, 987654321, Proveedor creado con éxito!, http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php, c2ba2f17a374eb08746d1a30bd837bf7, 14, 1, 17, 1, Build 01)</span>
+                  <span class="parameters">(Registrar Proveedor - Flujo Alternativo, http://localhost:8081/login, marcelo, 123456, , 987654321, El nombre de proveedor no puede ser vacío, http://localhost/testlink/lib/api/xmlrpc/v1/xmlrpc.php, 4baad71ddeedfb85be20e0062f91ceea, 8, 1, 7, 1, Build 01)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="b_editarCategoria(Actualizar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedo...)">
-                  </a> <!-- b_editarCategoria(Actualizar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedo...) -->
+                  <a name="b_editarCategoria(Editar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor editado con éxito...)">
+                  </a> <!-- b_editarCategoria(Editar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor editado con éxito...) -->
                   <span class="method-name">b_editarCategoria</span>
-                  <span class="parameters">(Actualizar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedor editado con éxito!, http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php, c2ba2f17a374eb08746d1a30bd837bf7, 14, 1, 17, 1, Build 01)</span>
+                  <span class="parameters">(Editar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor editado con éxito!, http://localhost/testlink/lib/api/xmlrpc/v1/xmlrpc.php, 4baad71ddeedfb85be20e0062f91ceea, 35, 3, 7, 1, Build 01)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="c_eliminarCategoria(Eliminar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedor ...)">
-                  </a> <!-- c_eliminarCategoria(Eliminar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedor ...) -->
+                  <a name="c_eliminarCategoria(Eliminar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor eliminado con é...)">
+                  </a> <!-- c_eliminarCategoria(Eliminar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor eliminado con é...) -->
                   <span class="method-name">c_eliminarCategoria</span>
-                  <span class="parameters">(Eliminar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedor eliminado con éxito, http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php, c2ba2f17a374eb08746d1a30bd837bf7, 14, 1, 17, 1, Build 01)</span>
+                  <span class="parameters">(Eliminar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor eliminado con éxito, http://localhost:81/testlink/lib/api/xmlrpc/v1/xmlrpc.php, c2ba2f17a374eb08746d1a30bd837bf7, 44, 1, 7, 1, Build 01)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -229,28 +290,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'a_insertarCategoria')
 data.setCell(0, 2, 'pe.com.test.system.testCase.MantenimientoProvider')
-data.setCell(0, 3, 16353);
+data.setCell(0, 3, 37475);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'a_insertarCategoria')
 data.setCell(1, 2, 'pe.com.test.system.testCase.MantenimientoProvider')
-data.setCell(1, 3, 15667);
+data.setCell(1, 3, 19432);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'b_editarCategoria')
+data.setCell(2, 1, 'a_insertarCategoria')
 data.setCell(2, 2, 'pe.com.test.system.testCase.MantenimientoProvider')
-data.setCell(2, 3, 11862);
+data.setCell(2, 3, 17512);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'c_eliminarCategoria')
+data.setCell(3, 1, 'b_editarCategoria')
 data.setCell(3, 2, 'pe.com.test.system.testCase.MantenimientoProvider')
-data.setCell(3, 3, 7628);
+data.setCell(3, 3, 13877);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'c_eliminarCategoria')
+data.setCell(4, 2, 'pe.com.test.system.testCase.MantenimientoProvider')
+data.setCell(4, 3, 9679);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'c_eliminarCategoria')
+data.setCell(5, 2, 'pe.com.test.system.testCase.MantenimientoProvider')
+data.setCell(5, 3, 9600);
 window.suiteTableData['MiLuzTestSuite']= { tableData: data, tableDiv: 'times-div-MiLuzTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 51 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-MiLuzTestSuite">
               </div> <!-- times-div-MiLuzTestSuite -->
             </div> <!-- times-div -->
@@ -282,24 +351,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, 987654321...)</span>
-                <span class="method-start">3732 ms</span>
+                <span class="method-name">a_insertarCategoria(Registrar Proveedor - Flujo Básico, http://localhost:8081/login, marcelo, 123456, Samsung, 987654321...)</span>
+                <span class="method-start">5819 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8080/login, marcelo, 123456, , 987654321, ...)</span>
-                <span class="method-start">20090 ms</span>
+                <span class="method-name">a_insertarCategoria(Registrar Proveedor - Flujo Alternativo, http://localhost:8081/login, marcelo, 123456, , 987654321, ...)</span>
+                <span class="method-start">25257 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">b_editarCategoria(Actualizar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedo...)</span>
-                <span class="method-start">35816 ms</span>
+                <span class="method-name">b_editarCategoria(Editar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor editado con éxito...)</span>
+                <span class="method-start">42880 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">c_eliminarCategoria(Eliminar Proveedor - Flujo Básico, http://localhost:8080/login, marcelo, 123456, Samsung, Proveedor ...)</span>
-                <span class="method-start">47733 ms</span>
+                <span class="method-name">c_eliminarCategoria(Eliminar Proveedor, http://localhost:8081/login, marcelo, 123456, Samsung, Proveedor eliminado con é...)</span>
+                <span class="method-start">56836 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">despuesDelTest</span>
-                <span class="method-start">55365 ms</span>
+                <span class="method-start">66445 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

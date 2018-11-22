@@ -11,7 +11,8 @@
       <class name="pe.com.test.system.testCase.MantenimientoProvider">
         <methods>
           <include name="despuesDelTest"/>
-          <include name="b_editarCategoria"/>
+          <include name="c_eliminarCategoria"/>
+          <include name="a_insertarCategoria"/>
           <include name="antesDelTest"/>
         </methods>
       </class> <!-- pe.com.test.system.testCase.MantenimientoProvider -->
